@@ -1,12 +1,13 @@
 describe AppDelegate do
-  describe "#application:didFinishLaunchingWithOptions" do
+
+  describe "#application:didFinishLaunchingWithOptions:" do
 
     before do
       @application = UIApplication.sharedApplication
     end
 
     it "creates the window" do
-      UIApplication.sharedApplication.windows.size.should == 1
+      @application.windows.size.should == 1
     end
 
     it "makes the window key" do
@@ -14,7 +15,7 @@ describe AppDelegate do
     end
 
     it "sets the root view controller" do
-      @application.windows.first.rootViewController.should.be.instance_of UIViewController
+      @application.windows.first.rootViewController.should.be.instance_of PaintingController
     end
   end
 end

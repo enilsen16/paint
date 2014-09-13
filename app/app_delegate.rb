@@ -3,8 +3,9 @@ class AppDelegate
 
     @window = UIWindow.alloc.initWithFrame(UIScreen.mainScreen.bounds)
     @window.makeKeyAndVisible
-    @window.rootViewController = UIViewController.alloc.initWithNibName(nil, bundle: nil)
-    @window.rootViewController.view.backgroundColor = UIColor.yellowColor
+
+    storyboard = UIStoryboard.storyboardWithName("main", bundle: nil)
+    @window.rootViewController = storyboard.instantiateInitialViewController
 
     true
   end
